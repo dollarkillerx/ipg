@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"log"
+	"strings"
 	"testing"
 )
 
@@ -20,4 +21,10 @@ func TestRangeIP(t *testing.T) {
 		log.Fatalln(err)
 	}
 	fmt.Println(ip)
+}
+
+func TestRangeString(t *testing.T) {
+	dd := "221.177.0.0-221.177.255.1"
+	split := strings.Split(dd, "-")
+	fmt.Println(split)
 }

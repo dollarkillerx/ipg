@@ -13,7 +13,7 @@ func main() {
 		log.Fatalln("???    ./ipg 192.168.11.9/27   or  ./ipg 221.177.0.0-221.177.255.1")
 	}
 	param := os.Args[1]
-	outPath := utils.Md5Encode(param)
+	outPath := utils.Md5Encode(param) + "_out.txt"
 	switch  {
 	case strings.Index(param,"/") != -1:
 		generationCidr(outPath,param)
